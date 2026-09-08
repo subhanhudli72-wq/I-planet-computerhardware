@@ -1,0 +1,2834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="I Planet Computer - Best computers at affordable prices.">
+<title>I Planet Computer | Best Computer at Affordable Price</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --primary:#2563eb;
+  --primary-dark:#1d4ed8;
+  --dark:#0f172a;
+  --text:#334155;
+  --muted:#64748b;
+  --bg:#f8fafc;
+  --white:#fff;
+  --border:#e2e8f0;
+  --green:#16a34a;
+  --red:#dc2626;
+  --radius:18px;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.navbar{
+  max-width:1200px;
+  height:72px;
+  padding:0 20px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--dark);
+  font-size:20px;
+  font-weight:800;
+}
+
+.logo-icon{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:var(--primary);
+  color:#fff;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  font-size:14px;
+  font-weight:700;
+}
+
+.nav-links a:hover{
+  color:var(--primary);
+}
+
+.nav-actions{
+  display:flex;
+  gap:10px;
+}
+
+.icon-btn{
+  width:42px;
+  height:42px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:white;
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+
+.cart-count{
+  position:absolute;
+  right:-5px;
+  top:-5px;
+  width:19px;
+  height:19px;
+  border-radius:50%;
+  background:var(--red);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:11px;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(135deg,#eff6ff,#fff 55%,#dbeafe);
+}
+
+.hero-inner{
+  max-width:1200px;
+  min-height:570px;
+  margin:auto;
+  padding:70px 20px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:50px;
+  background:#dbeafe;
+  color:#1d4ed8;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  color:var(--dark);
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:var(--primary);
+}
+
+.hero p{
+  max-width:580px;
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:28px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  border:0;
+  border-radius:12px;
+  padding:13px 20px;
+  font-weight:800;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  transition:.2s;
+}
+
+.btn-primary{
+  background:var(--primary);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--primary-dark);
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  background:white;
+  border:1px solid var(--border);
+  color:var(--dark);
+}
+
+.btn-secondary:hover{
+  border-color:var(--primary);
+  color:var(--primary);
+}
+
+.hero-card{
+  position:relative;
+  min-height:400px;
+  border-radius:30px;
+  overflow:hidden;
+  background:#0f172a;
+  box-shadow:0 30px 70px rgba(15,23,42,.2);
+}
+
+.hero-card img{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  object-fit:cover;
+  opacity:.82;
+}
+
+.hero-card-content{
+  position:absolute;
+  left:25px;
+  right:25px;
+  bottom:25px;
+  padding:18px;
+  background:rgba(255,255,255,.94);
+  border-radius:18px;
+}
+
+.hero-card-content strong{
+  display:block;
+  color:var(--dark);
+  font-size:20px;
+}
+
+/* GENERAL */
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+.section-heading{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.eyebrow{
+  color:var(--primary);
+  font-weight:800;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.section-heading h2{
+  color:var(--dark);
+  font-size:clamp(30px,5vw,44px);
+  margin:8px 0;
+}
+
+.section-heading p{
+  color:var(--muted);
+}
+
+/* CATEGORIES */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.category-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.category-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(15,23,42,.1);
+}
+
+.category-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.category-info{
+  padding:17px;
+}
+
+.category-info h3{
+  color:var(--dark);
+  font-size:17px;
+}
+
+.category-info span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* SHOP */
+
+.shop-tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:30px;
+}
+
+.search-box{
+  flex:1;
+  min-width:230px;
+  position:relative;
+}
+
+.search-box input{
+  width:100%;
+  padding:14px 16px 14px 45px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  outline:none;
+  background:white;
+}
+
+.search-box input:focus{
+  border-color:var(--primary);
+}
+
+.search-icon{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+select{
+  border:1px solid var(--border);
+  background:white;
+  border-radius:13px;
+  padding:0 15px;
+  min-width:160px;
+  outline:none;
+}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:.25s;
+}
+
+.product-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 40px rgba(15,23,42,.1);
+}
+
+.product-image{
+  position:relative;
+  background:#f1f5f9;
+}
+
+.product-image img{
+  display:block;
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+
+.badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:5px 9px;
+  border-radius:7px;
+  background:var(--primary);
+  color:white;
+  font-size:11px;
+  font-weight:800;
+}
+
+.wishlist{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:50%;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.product-info{
+  padding:17px;
+}
+
+.product-category{
+  color:var(--primary);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.product-info h3{
+  color:var(--dark);
+  font-size:16px;
+  margin:4px 0 7px;
+}
+
+.rating{
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.rating span{
+  color:#f59e0b;
+}
+
+.price{
+  font-size:19px;
+  color:var(--dark);
+  font-weight:900;
+}
+
+.old-price{
+  color:#94a3b8;
+  font-size:12px;
+  text-decoration:line-through;
+  margin-left:5px;
+}
+
+.add-btn{
+  width:100%;
+  margin-top:12px;
+}
+
+/* WHY */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.why-card{
+  background:white;
+  border:1px solid var(--border);
+  padding:25px;
+  border-radius:var(--radius);
+}
+
+.why-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:#eff6ff;
+  color:var(--primary);
+  font-size:22px;
+  margin-bottom:16px;
+}
+
+.why-card h3{
+  color:var(--dark);
+  margin-bottom:7px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* OWNER */
+
+.owner-section{
+  background:white;
+}
+
+.owner{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:55px;
+  align-items:center;
+}
+
+.owner-photo img{
+  width:100%;
+  max-width:360px;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:30px;
+  display:block;
+  margin:auto;
+  box-shadow:0 20px 50px rgba(15,23,42,.15);
+}
+
+.owner-content h2{
+  color:var(--dark);
+  font-size:42px;
+  margin:8px 0;
+}
+
+.owner-title{
+  color:var(--primary);
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.owner-content p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.owner-quote{
+  border-left:4px solid var(--primary);
+  padding-left:18px;
+  font-style:italic;
+  color:var(--dark)!important;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.testimonial{
+  background:white;
+  border:1px solid var(--border);
+  padding:25px;
+  border-radius:var(--radius);
+}
+
+.stars{
+  color:#f59e0b;
+  margin-bottom:13px;
+}
+
+.testimonial p{
+  margin-bottom:18px;
+}
+
+.customer{
+  color:var(--dark);
+  font-weight:800;
+}
+
+/* CTA */
+
+.cta{
+  max-width:1160px;
+  margin:20px auto 80px;
+  padding:60px 30px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#1d4ed8,#2563eb);
+  color:white;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.cta p{
+  opacity:.9;
+  margin-bottom:25px;
+}
+
+.cta .btn{
+  background:white;
+  color:var(--primary);
+}
+
+/* FOOTER */
+
+footer{
+  background:#0f172a;
+  color:white;
+  padding:60px 20px 25px;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-brand p{
+  color:#94a3b8;
+  max-width:350px;
+}
+
+footer h3{
+  margin-bottom:15px;
+}
+
+footer a{
+  display:block;
+  color:#94a3b8;
+  margin:8px 0;
+  font-size:14px;
+}
+
+footer a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  max-width:1200px;
+  margin:40px auto 0;
+  padding-top:20px;
+  border-top:1px solid #334155;
+  color:#94a3b8;
+  text-align:center;
+  font-size:13px;
+}
+
+/* MODALS */
+
+.modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  padding:20px;
+  background:rgba(15,23,42,.65);
+  overflow:auto;
+}
+
+.modal-overlay.active{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal{
+  width:min(900px,100%);
+  max-height:90vh;
+  overflow-y:auto;
+  position:relative;
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:15px;
+  z-index:5;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:white;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+  font-size:20px;
+}
+
+.product-detail{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.detail-image{
+  background:#f1f5f9;
+}
+
+.detail-image img{
+  width:100%;
+  height:450px;
+  object-fit:cover;
+}
+
+.detail-content{
+  padding:40px;
+}
+
+.detail-content h2{
+  color:var(--dark);
+  font-size:32px;
+  margin:8px 0;
+}
+
+.detail-price{
+  color:var(--dark);
+  font-size:30px;
+  font-weight:900;
+}
+
+.stock{
+  color:var(--green);
+  font-size:13px;
+  font-weight:800;
+  margin:8px 0 20px;
+}
+
+.detail-description{
+  color:var(--muted);
+  margin:20px 0;
+}
+
+/* CART */
+
+.cart-modal{
+  max-width:600px;
+}
+
+.cart-content{
+  padding:30px;
+}
+
+.cart-content h2{
+  color:var(--dark);
+  margin-bottom:20px;
+}
+
+.cart-item{
+  display:flex;
+  gap:13px;
+  padding:15px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.cart-item img{
+  width:70px;
+  height:70px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.cart-item-info{
+  flex:1;
+}
+
+.cart-item-info h4{
+  color:var(--dark);
+  font-size:14px;
+}
+
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:6px;
+}
+
+.quantity button{
+  width:27px;
+  height:27px;
+  border:1px solid var(--border);
+  background:white;
+  border-radius:7px;
+}
+
+.remove{
+  border:0!important;
+  background:none!important;
+  color:var(--red);
+  width:auto!important;
+  padding:0 5px;
+}
+
+/* CHECKOUT */
+
+.checkout-modal{
+  max-width:700px;
+}
+
+.checkout{
+  padding:30px;
+}
+
+.checkout h2{
+  color:var(--dark);
+  margin-bottom:20px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.form-group{
+  margin-bottom:15px;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+.form-group label{
+  display:block;
+  color:var(--dark);
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:var(--primary);
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:900;
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  font-size:27px;
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE NAV */
+
+.mobile-nav{
+  display:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+  .products-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .categories,
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+  }
+
+  .hero-card{
+    max-width:650px;
+    width:100%;
+    margin:auto;
+  }
+
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:700px){
+
+  body{
+    padding-bottom:65px;
+  }
+
+  .navbar{
+    height:62px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-inner{
+    padding:50px 20px;
+    min-height:auto;
+  }
+
+  .hero h1{
+    font-size:45px;
+    letter-spacing:-2px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-card{
+    min-height:300px;
+  }
+
+  .hero-card img{
+    min-height:300px;
+  }
+
+  .section{
+    padding:55px 16px;
+  }
+
+  .products-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .product-image img{
+    height:160px;
+  }
+
+  .product-info{
+    padding:12px;
+  }
+
+  .product-info h3{
+    font-size:14px;
+  }
+
+  .price{
+    font-size:16px;
+  }
+
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .category-card img{
+    height:120px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .owner{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .owner-content h2{
+    font-size:34px;
+  }
+
+  .testimonials{
+    grid-template-columns:1fr;
+  }
+
+  .cta{
+    margin:10px 16px 55px;
+    padding:45px 20px;
+  }
+
+  .cta h2{
+    font-size:30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .mobile-nav{
+    position:fixed;
+    display:flex;
+    bottom:0;
+    left:0;
+    right:0;
+    height:62px;
+    background:white;
+    border-top:1px solid var(--border);
+    z-index:1000;
+    justify-content:space-around;
+    align-items:center;
+  }
+
+  .mobile-nav a,
+  .mobile-nav button{
+    border:0;
+    background:none;
+    color:var(--muted);
+    font-size:11px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2px;
+  }
+
+  .mobile-nav span{
+    font-size:20px;
+  }
+
+  .product-detail{
+    grid-template-columns:1fr;
+  }
+
+  .detail-image img{
+    height:300px;
+  }
+
+  .detail-content{
+    padding:25px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+}
+
+@media(max-width:430px){
+
+  .logo{
+    font-size:16px;
+  }
+
+  .logo-icon{
+    width:36px;
+    height:36px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .product-image img{
+    height:145px;
+  }
+
+  .shop-tools{
+    display:block;
+  }
+
+  .search-box{
+    margin-bottom:10px;
+  }
+
+  select{
+    width:100%;
+    height:48px;
+    margin-bottom:8px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+  <span class="logo-icon">💻</span>
+  <span>I Planet Computer</span>
+</a>
+
+<div class="nav-links">
+  <a href="#home">Home</a>
+  <a href="#shop">Shop</a>
+  <a href="#categories">Categories</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="nav-actions">
+
+<button class="icon-btn" onclick="openCart()" aria-label="Shopping cart">
+  🛒
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-inner">
+
+<div>
+
+<span class="hero-badge">
+  🚀 Your Trusted Computer Store
+</span>
+
+<h1>
+  Best Computer<br>
+  <span>At Affordable Price.</span>
+</h1>
+
+<p>
+  Discover quality computers, laptops, accessories and hardware
+  for work, gaming, business and everyday use.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-primary" onclick="scrollToShop()">
+  🛍️ Shop Now
+</button>
+
+<a class="btn btn-secondary" href="#about">
+  👤 Meet the Owner
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<img
+src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=85"
+alt="Computer laptop"
+>
+
+<div class="hero-card-content">
+<strong>I Planet Computer</strong>
+<span>Quality technology. Honest pricing. Reliable service.</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="section" id="categories">
+
+<div class="section-heading">
+
+<span class="eyebrow">Browse</span>
+
+<h2>Shop by Category</h2>
+
+<p>Find the right technology for your needs.</p>
+
+</div>
+
+
+<div class="categories">
+
+<div class="category-card" onclick="filterCategory('Laptop')">
+
+<img
+src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80"
+alt="Laptops"
+>
+
+<div class="category-info">
+<h3>Laptops</h3>
+<span>Work & Entertainment</span>
+</div>
+
+</div>
+
+
+<div class="category-card" onclick="filterCategory('Desktop')">
+
+<img
+src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=700&q=80"
+alt="Desktop computers"
+>
+
+<div class="category-info">
+<h3>Desktops</h3>
+<span>Powerful computing</span>
+</div>
+
+</div>
+
+
+<div class="category-card" onclick="filterCategory('Accessories')">
+
+<img
+src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=80"
+alt="Computer accessories"
+>
+
+<div class="category-info">
+<h3>Accessories</h3>
+<span>Essential accessories</span>
+</div>
+
+</div>
+
+
+<div class="category-card" onclick="filterCategory('Components')">
+
+<img
+src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+alt="Computer components"
+>
+
+<div class="category-info">
+<h3>Components</h3>
+<span>Build & upgrade</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section class="section" id="shop">
+
+<div class="section-heading">
+
+<span class="eyebrow">Our Products</span>
+
+<h2>Featured Products</h2>
+
+<p>Quality products at competitive prices.</p>
+
+</div>
+
+
+<div class="shop-tools">
+
+<div class="search-box">
+
+<span class="search-icon">🔍</span>
+
+<input
+type="search"
+id="searchInput"
+placeholder="Search products..."
+oninput="renderProducts()"
+>
+
+</div>
+
+
+<select id="categoryFilter" onchange="renderProducts()">
+
+<option value="All">All Categories</option>
+<option value="Laptop">Laptops</option>
+<option value="Desktop">Desktops</option>
+<option value="Accessories">Accessories</option>
+<option value="Components">Components</option>
+
+</select>
+
+
+<select id="sortFilter" onchange="renderProducts()">
+
+<option value="default">Sort: Featured</option>
+<option value="low">Price: Low to High</option>
+<option value="high">Price: High to Low</option>
+<option value="rating">Top Rated</option>
+
+</select>
+
+</div>
+
+
+<div class="products-grid" id="productsGrid"></div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<span class="eyebrow">Why Us</span>
+
+<h2>Why Choose I Planet Computer?</h2>
+
+<p>We're here to make technology simple and affordable.</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-icon">✓</div>
+
+<h3>Quality Products</h3>
+
+<p>
+Carefully selected computer products from trusted brands.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">₹</div>
+
+<h3>Affordable Prices</h3>
+
+<p>
+Competitive pricing without compromising on quality.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">🤝</div>
+
+<h3>Trusted Service</h3>
+
+<p>
+Friendly support and genuine assistance for every customer.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">⚡</div>
+
+<h3>Fast Support</h3>
+
+<p>
+Get quick answers about products, orders and services.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= OWNER ================= -->
+
+<section class="owner-section" id="about">
+
+<div class="section">
+
+<div class="owner">
+
+<div class="owner-photo">
+
+<img
+src="https://i.ibb.co/BVYH6ksD/file-000000008e8c81fa8d321449b2ac507a.png"
+alt="Mukhtiyar Khan - Owner of I Planet Computer"
+>
+
+</div>
+
+
+<div class="owner-content">
+
+<span class="eyebrow">Meet the Owner</span>
+
+<h2>Mukhtiyar Khan</h2>
+
+<div class="owner-title">
+Founder & Owner — I Planet Computer
+</div>
+
+<p>
+Welcome to I Planet Computer. Our mission is to provide
+reliable computer products at affordable prices while giving
+every customer a friendly and trustworthy shopping experience.
+</p>
+
+<p>
+Whether you're buying a laptop, desktop, computer accessories,
+upgrading your system, or building a new PC, we're here to help
+you choose the right product.
+</p>
+
+<p class="owner-quote">
+"Our goal is simple — quality products, honest prices and happy customers."
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<span class="eyebrow">Customers</span>
+
+<h2>What Our Customers Say</h2>
+
+<p>Real trust is built one customer at a time.</p>
+
+</div>
+
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Good products and reasonable prices. The service was also very helpful."
+</p>
+
+<div class="customer">
+— Rahul P.
+</div>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"I got exactly what I needed for my computer build. Very good experience."
+</p>
+
+<div class="customer">
+— Akash S.
+</div>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Affordable pricing and quick response. I would recommend this store."
+</p>
+
+<div class="customer">
+— Sameer K.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta" id="contact">
+
+<h2>Need Help Choosing a Computer?</h2>
+
+<p>
+Contact I Planet Computer and we'll help you find the right product.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919309031070"
+target="_blank"
+>
+💬 Chat on WhatsApp
+</a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<h2>💻 I Planet Computer</h2>
+
+<p>
+Best computer products at affordable prices.
+Quality technology with reliable service.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+<a href="#shop">Shop</a>
+<a href="#categories">Categories</a>
+<a href="#about">About Owner</a>
+
+</div>
+
+
+<div>
+
+<h3>Categories</h3>
+
+<a href="#shop" onclick="filterCategory('Laptop')">Laptops</a>
+<a href="#shop" onclick="filterCategory('Desktop')">Desktops</a>
+<a href="#shop" onclick="filterCategory('Accessories')">Accessories</a>
+<a href="#shop" onclick="filterCategory('Components')">Components</a>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<a href="tel:+919309031070">
+📞 +91 93090 31070
+</a>
+
+<a href="https://wa.me/919309031070" target="_blank">
+💬 WhatsApp
+</a>
+
+<a href="mailto:info@iplanetcomputer.com">
+✉️ Email
+</a>
+
+<a href="#">
+📍 Maharashtra, India
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 I Planet Computer. All rights reserved.
+
+</div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919309031070"
+target="_blank"
+aria-label="Chat on WhatsApp"
+>
+💬
+</a>
+
+
+<!-- ================= MOBILE NAV ================= -->
+
+<div class="mobile-nav">
+
+<a href="#home">
+<span>⌂</span>
+Home
+</a>
+
+<a href="#categories">
+<span>▦</span>
+Categories
+</a>
+
+<a href="#shop">
+<span>🔍</span>
+Search
+</a>
+
+<button onclick="openCart()">
+<span>🛒</span>
+Cart
+</button>
+
+<a href="#about">
+<span>👤</span>
+About
+</a>
+
+</div>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+
+<div class="modal-overlay" id="productModal">
+
+<div class="modal">
+
+<button class="close" onclick="closeModal('productModal')">
+×
+</button>
+
+
+<div class="product-detail">
+
+<div class="detail-image">
+
+<img id="detailImage" src="" alt="">
+
+</div>
+
+
+<div class="detail-content">
+
+<div class="product-category" id="detailCategory"></div>
+
+<h2 id="detailName"></h2>
+
+<div class="rating">
+<span>★★★★★</span>
+<span id="detailRating"></span>
+</div>
+
+<div class="detail-price" id="detailPrice"></div>
+
+<div class="stock" id="detailStock"></div>
+
+<p class="detail-description" id="detailDescription"></p>
+
+<button
+class="btn btn-primary"
+style="width:100%"
+id="detailAddButton"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal-overlay" id="cartModal">
+
+<div class="modal cart-modal">
+
+<button class="close" onclick="closeModal('cartModal')">
+×
+</button>
+
+<div class="cart-content">
+
+<h2>Your Cart</h2>
+
+<div id="cartItems"></div>
+
+<div id="cartSummary"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<div class="modal-overlay" id="checkoutModal">
+
+<div class="modal checkout-modal">
+
+<button class="close" onclick="closeModal('checkoutModal')">
+×
+</button>
+
+
+<div class="checkout">
+
+<h2>Complete Your Order</h2>
+
+<form
+id="checkoutForm"
+action="https://formspree.io/f/xyeynbkk"
+method="POST"
+>
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>Full Name *</label>
+
+<input
+id="customerName"
+name="name"
+required
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number *</label>
+
+<input
+id="customerPhone"
+name="phone"
+required
+type="tel"
+placeholder="10 digit mobile number"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input
+id="customerEmail"
+name="email"
+type="email"
+placeholder="you@email.com"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Pincode *</label>
+
+<input
+id="customerPincode"
+name="pincode"
+required
+placeholder="Pincode"
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Delivery Address *</label>
+
+<textarea
+id="customerAddress"
+name="address"
+rows="3"
+required
+placeholder="House no., street, area..."
+></textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Order Notes</label>
+
+<textarea
+id="orderNotes"
+name="notes"
+rows="2"
+placeholder="Any additional information?"
+></textarea>
+
+</div>
+
+</div>
+
+
+<input
+type="hidden"
+name="_subject"
+value="New Order - I Planet Computer"
+>
+
+<input
+type="hidden"
+name="order_details"
+id="orderDetails"
+>
+
+<input
+type="hidden"
+name="order_total"
+id="orderTotal"
+>
+
+
+<button
+class="btn btn-primary"
+style="width:100%"
+type="submit"
+>
+📩 Place Order
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   PRODUCT DATABASE
+   EDIT PRODUCTS HERE
+========================================================= */
+
+const products = [
+
+{
+id:1,
+name:"HP 15.6-inch Laptop",
+price:45999,
+originalPrice:49999,
+category:"Laptop",
+description:"Reliable laptop for students, professionals and everyday computing.",
+images:["https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85"],
+rating:4.7,
+stock:8,
+badge:"Popular"
+},
+
+{
+id:2,
+name:"Gaming Laptop RTX",
+price:74999,
+originalPrice:82999,
+category:"Laptop",
+description:"Powerful gaming laptop designed for demanding games and applications.",
+images:["https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=900&q=85"],
+rating:4.8,
+stock:5,
+badge:"Gaming"
+},
+
+{
+id:3,
+name:"Business Laptop Pro",
+price:58999,
+originalPrice:62999,
+category:"Laptop",
+description:"Professional laptop with excellent performance for business and office work.",
+images:["https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=85"],
+rating:4.6,
+stock:7,
+badge:"Best Seller"
+},
+
+{
+id:4,
+name:"Intel Core Desktop PC",
+price:32999,
+originalPrice:35999,
+category:"Desktop",
+description:"Fast and reliable desktop computer for home, office and education.",
+images:["https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=85"],
+rating:4.5,
+stock:10,
+badge:"Value"
+},
+
+{
+id:5,
+name:"Gaming Desktop PC",
+price:69999,
+originalPrice:74999,
+category:"Desktop",
+description:"High-performance gaming desktop for smooth gaming and creative work.",
+images:["https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=900&q=85"],
+rating:4.9,
+stock:4,
+badge:"Gaming"
+},
+
+{
+id:6,
+name:"Wireless Keyboard & Mouse",
+price:1499,
+originalPrice:1999,
+category:"Accessories",
+description:"Comfortable wireless keyboard and mouse combo for everyday use.",
+images:["https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=85"],
+rating:4.5,
+stock:20,
+badge:"Deal"
+},
+
+{
+id:7,
+name:"Mechanical Gaming Keyboard",
+price:2499,
+originalPrice:2999,
+category:"Accessories",
+description:"Responsive mechanical keyboard designed for gaming and productivity.",
+images:["https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=900&q=85"],
+rating:4.8,
+stock:12,
+badge:"Gaming"
+},
+
+{
+id:8,
+name:"Wireless Gaming Mouse",
+price:1799,
+originalPrice:2199,
+category:"Accessories",
+description:"Precise wireless gaming mouse with comfortable ergonomic design.",
+images:["https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=85"],
+rating:4.6,
+stock:15,
+badge:"Popular"
+},
+
+{
+id:9,
+name:"27-inch Full HD Monitor",
+price:13999,
+originalPrice:15999,
+category:"Accessories",
+description:"Large Full HD monitor suitable for work, entertainment and gaming.",
+images:["https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=85"],
+rating:4.7,
+stock:6,
+badge:"Featured"
+},
+
+{
+id:10,
+name:"1TB SSD",
+price:5999,
+originalPrice:6999,
+category:"Components",
+description:"Fast 1TB SSD for improving system speed and storage.",
+images:["https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=85"],
+rating:4.9,
+stock:18,
+badge:"Fast"
+},
+
+{
+id:11,
+name:"16GB DDR4 RAM",
+price:3299,
+originalPrice:3999,
+category:"Components",
+description:"16GB memory module for smooth multitasking and gaming.",
+images:["https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=900&q=85"],
+rating:4.8,
+stock:14,
+badge:"Popular"
+},
+
+{
+id:12,
+name:"Gaming Graphics Card",
+price:28999,
+originalPrice:31999,
+category:"Components",
+description:"Dedicated graphics card for gaming, editing and demanding applications.",
+images:["https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=900&q=85"],
+rating:4.8,
+stock:3,
+badge:"Gaming"
+}
+
+];
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+let cart =
+JSON.parse(localStorage.getItem("iplanetCart")) || [];
+
+
+function saveCart(){
+
+localStorage.setItem(
+"iplanetCart",
+JSON.stringify(cart)
+);
+
+updateCartCount();
+
+}
+
+
+function updateCartCount(){
+
+const count =
+cart.reduce(
+(sum,item)=>sum+item.quantity,
+0
+);
+
+document.getElementById(
+"cartCount"
+).textContent=count;
+
+}
+
+
+function addToCart(id){
+
+const product =
+products.find(p=>p.id===id);
+
+if(!product)return;
+
+const existing =
+cart.find(item=>item.id===id);
+
+if(existing){
+
+if(existing.quantity < product.stock){
+existing.quantity++;
+}
+
+}else{
+
+cart.push({
+id:id,
+quantity:1
+});
+
+}
+
+saveCart();
+
+alert(product.name+" added to cart!");
+
+}
+
+
+function changeQuantity(id,change){
+
+const item =
+cart.find(item=>item.id===id);
+
+if(!item)return;
+
+const product =
+products.find(p=>p.id===id);
+
+item.quantity+=change;
+
+if(item.quantity<=0){
+
+cart=
+cart.filter(item=>item.id!==id);
+
+}
+
+if(item.quantity>product.stock){
+
+item.quantity=product.stock;
+
+}
+
+saveCart();
+
+renderCart();
+
+}
+
+
+function removeFromCart(id){
+
+cart=
+cart.filter(item=>item.id!==id);
+
+saveCart();
+
+renderCart();
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+function renderProducts(){
+
+const grid=
+document.getElementById(
+"productsGrid"
+);
+
+const search=
+document.getElementById(
+"searchInput"
+).value.toLowerCase();
+
+const category=
+document.getElementById(
+"categoryFilter"
+).value;
+
+const sort=
+document.getElementById(
+"sortFilter"
+).value;
+
+
+let filtered=
+products.filter(product=>{
+
+const matchesSearch=
+product.name
+.toLowerCase()
+.includes(search)
+||
+product.description
+.toLowerCase()
+.includes(search);
+
+const matchesCategory=
+category==="All"
+||
+product.category===category;
+
+return matchesSearch &&
+matchesCategory;
+
+});
+
+
+if(sort==="low"){
+filtered.sort(
+(a,b)=>a.price-b.price
+);
+}
+
+if(sort==="high"){
+filtered.sort(
+(a,b)=>b.price-a.price
+);
+}
+
+if(sort==="rating"){
+filtered.sort(
+(a,b)=>b.rating-a.rating
+);
+}
+
+
+if(filtered.length===0){
+
+grid.innerHTML=`
+
+<div style="
+grid-column:1/-1;
+text-align:center;
+padding:50px">
+
+<h3>No products found</h3>
+
+<p style="color:#64748b">
+Try another search or category.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+grid.innerHTML=
+
+filtered.map(product=>`
+
+<article class="product-card">
+
+<div class="product-image">
+
+<img
+src="${product.images[0]}"
+alt="${product.name}"
+loading="lazy"
+>
+
+<span class="badge">
+${product.badge}
+</span>
+
+<button
+class="wishlist"
+onclick="toggleWishlist(this)"
+>
+♡
+</button>
+
+</div>
+
+
+<div class="product-info">
+
+<div class="product-category">
+${product.category}
+</div>
+
+<h3>${product.name}</h3>
+
+<div class="rating">
+<span>★★★★★</span>
+${product.rating}
+</div>
+
+
+<div>
+
+<span class="price">
+₹${product.price.toLocaleString("en-IN")}
+</span>
+
+<span class="old-price">
+₹${product.originalPrice.toLocaleString("en-IN")}
+</span>
+
+</div>
+
+
+<button
+class="btn btn-secondary add-btn"
+onclick="viewProduct(${product.id})"
+>
+View Product
+</button>
+
+
+<button
+class="btn btn-primary add-btn"
+onclick="addToCart(${product.id})"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</article>
+
+`).join("");
+
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+function viewProduct(id){
+
+const product=
+products.find(p=>p.id===id);
+
+if(!product)return;
+
+
+document.getElementById(
+"detailImage"
+).src=product.images[0];
+
+document.getElementById(
+"detailImage"
+).alt=product.name;
+
+document.getElementById(
+"detailCategory"
+).textContent=product.category;
+
+document.getElementById(
+"detailName"
+).textContent=product.name;
+
+document.getElementById(
+"detailRating"
+).textContent=
+" "+product.rating;
+
+document.getElementById(
+"detailPrice"
+).textContent=
+"₹"+product.price.toLocaleString("en-IN");
+
+document.getElementById(
+"detailStock"
+).textContent=
+product.stock>0
+?"✓ In Stock"
+:"Out of Stock";
+
+document.getElementById(
+"detailDescription"
+).textContent=
+product.description;
+
+
+document.getElementById(
+"detailAddButton"
+).onclick=function(){
+
+addToCart(product.id);
+
+closeModal("productModal");
+
+};
+
+
+document.getElementById(
+"productModal"
+).classList.add("active");
+
+}
+
+
+/* =========================================================
+   CART DISPLAY
+========================================================= */
+
+function renderCart(){
+
+const container=
+document.getElementById(
+"cartItems"
+);
+
+const summary=
+document.getElementById(
+"cartSummary"
+);
+
+
+if(cart.length===0){
+
+container.innerHTML=`
+
+<div style="
+text-align:center;
+padding:40px 10px">
+
+<div style="font-size:45px">
+🛒
+</div>
+
+<h3 style="
+margin-top:10px;
+color:#0f172a">
+
+Your cart is empty
+
+</h3>
+
+<p style="color:#64748b">
+Add some products to get started.
+</p>
+
+</div>
+
+`;
+
+summary.innerHTML="";
+
+return;
+
+}
+
+
+let subtotal=0;
+
+
+container.innerHTML=
+
+cart.map(item=>{
+
+const product=
+products.find(
+p=>p.id===item.id
+);
+
+const itemTotal=
+product.price*item.quantity;
+
+subtotal+=itemTotal;
+
+
+return `
+
+<div class="cart-item">
+
+<img
+src="${product.images[0]}"
+alt="${product.name}"
+>
+
+<div class="cart-item-info">
+
+<h4>
+${product.name}
+</h4>
+
+<strong>
+₹${product.price.toLocaleString("en-IN")}
+</strong>
+
+
+<div class="quantity">
+
+<button
+onclick="changeQuantity(${product.id},-1)"
+>
+−
+</button>
+
+<span>${item.quantity}</span>
+
+<button
+onclick="changeQuantity(${product.id},1)"
+>
++
+</button>
+
+<button
+class="remove"
+onclick="removeFromCart(${product.id})"
+>
+Remove
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+}).join("");
+
+
+const delivery=
+subtotal>=10000
+?0
+:40;
+
+const total=
+subtotal+delivery;
+
+
+summary.innerHTML=`
+
+<div style="
+margin-top:20px;
+background:#f8fafc;
+padding:18px;
+border-radius:14px">
+
+<div style="
+display:flex;
+justify-content:space-between;
+margin:7px 0">
+
+<span>Subtotal</span>
+
+<strong>
+₹${subtotal.toLocaleString("en-IN")}
+</strong>
+
+</div>
+
+
+<div style="
+display:flex;
+justify-content:space-between;
+margin:7px 0">
+
+<span>Delivery</span>
+
+<strong>
+${delivery===0
+?"FREE"
+:"₹"+delivery}
+</strong>
+
+</div>
+
+
+<div style="
+display:flex;
+justify-content:space-between;
+border-top:1px solid #e2e8f0;
+padding-top:12px;
+margin-top:12px;
+font-size:19px;
+font-weight:800;
+color:#0f172a">
+
+<span>Total</span>
+
+<strong>
+₹${total.toLocaleString("en-IN")}
+</strong>
+
+</div>
+
+
+<button
+class="btn btn-primary"
+style="width:100%;margin-top:15px"
+onclick="openCheckout()"
+>
+Proceed to Checkout →
+</button>
+
+</div>
+
+`;
+
+}
+
+
+function openCart(){
+
+renderCart();
+
+document.getElementById(
+"cartModal"
+).classList.add("active");
+
+}
+
+
+function openCheckout(){
+
+if(cart.length===0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+closeModal("cartModal");
+
+prepareOrderData();
+
+document.getElementById(
+"checkoutModal"
+).classList.add("active");
+
+}
+
+
+/* =========================================================
+   FORMSPREE ORDER DATA
+========================================================= */
+
+function prepareOrderData(){
+
+let subtotal=0;
+
+let orderDetails="";
+
+
+cart.forEach(item=>{
+
+const product=
+products.find(
+p=>p.id===item.id
+);
+
+const itemTotal=
+product.price*item.quantity;
+
+subtotal+=itemTotal;
+
+orderDetails+=
+product.name+
+" x "+
+item.quantity+
+" = ₹"+
+itemTotal.toLocaleString("en-IN")+
+"\n";
+
+});
+
+
+const delivery=
+subtotal>=10000?0:40;
+
+const total=
+subtotal+delivery;
+
+
+document.getElementById(
+"orderDetails"
+).value=orderDetails;
+
+document.getElementById(
+"orderTotal"
+).value=
+"₹"+total.toLocaleString("en-IN");
+
+}
+
+
+/* =========================================================
+   FORM SUBMISSION
+========================================================= */
+
+document.getElementById(
+"checkoutForm"
+).addEventListener(
+"submit",
+function(){
+
+prepareOrderData();
+
+/*
+The form submits directly to Formspree.
+After submission, the cart is cleared.
+*/
+
+setTimeout(function(){
+
+cart=[];
+
+saveCart();
+
+},500);
+
+}
+);
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+function filterCategory(category){
+
+document.getElementById(
+"categoryFilter"
+).value=category;
+
+renderProducts();
+
+document.getElementById(
+"shop"
+).scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function scrollToShop(){
+
+document.getElementById(
+"shop"
+).scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+function closeModal(id){
+
+document.getElementById(
+id
+).classList.remove("active");
+
+}
+
+
+document.querySelectorAll(
+".modal-overlay"
+).forEach(overlay=>{
+
+overlay.addEventListener(
+"click",
+function(e){
+
+if(e.target===overlay){
+
+overlay.classList.remove(
+"active"
+);
+
+}
+
+}
+);
+
+});
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+function toggleWishlist(button){
+
+if(button.textContent==="♡"){
+
+button.textContent="♥";
+
+button.style.color="#dc2626";
+
+}else{
+
+button.textContent="♡";
+
+button.style.color="";
+
+}
+
+}
+
+
+/* =========================================================
+   START WEBSITE
+========================================================= */
+
+renderProducts();
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>
